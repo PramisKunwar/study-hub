@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procastination Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class = "container">
+    <div class="header">
+      <span class="icon">
+        🎯
+      </span>
+      <h1>Procrastination Detector</h1>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="start-l">Time on social media</div>
+        <div class="start-value" id="time-value">0m 0s</div>
+        <div class="start-hint">Warning at 15 min</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Tab Switches (10 min)</div>
+        <div class="stat-value" id="tab-value">0</div>
+        <div class="stat-hint">Warning at 20 switches</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label"> Scroll Activity (2 min)</div>
+        <div class="stat-value" id="scroll-value">0</div>
+        <div class="stat-hint">Warning at 100 scrolls</div>
+      </div>
+    </div>
+
+    <div class="foote">
+      Stay Focused. You've got this! 🚀
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
