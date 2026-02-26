@@ -5,40 +5,45 @@
 
 // Run when the popup opens
 document.addEventListener("DOMContentLoaded", () => {
-
-  chrome.storgage.local.get(
+  // Get all stored values at once
+  chrome.storage.local.get(
     ["timeOnSite", "tabSwitchCount", "scrollCount"],
     (data) => {
-
+      // --- Time on Social Media ---
       const totalSeconds = data.timeOnSite || 0;
       const minutes = Math.floor(totalSeconds / 60);
       const seconds = totalSeconds % 60;
       const timeEl = document.getElementById("time-value");
       timeEl.textContent = `${minutes}m ${seconds}s`;
 
-
-      if(totalSeconds >= 15 * 60) {
+      // Add warning class if over 15 minutes
+      if (totalSeconds >= 15 * 60) {
         timeEl.classList.add("warning");
       }
 
+      // --- Tab Switches ---
       const tabCount = data.tabSwitchCount || 0;
-      const tabeEl = document.getElementById("tab-value");
-      tabeEl.textContent = tabCount;
+      const tabEl = document.getElementById("tab-value");
+      tabEl.textContent = tabCount;
 
-      if(tabCount >= 20) {
-        tabeEl.classList.add("warning");
+      // Add warning class if over 20 switches
+      if (tabCount >= 20) {
+        tabEl.classList.add("warning");
       }
 
+      // --- Scroll Activity ---
       const scrollCount = data.scrollCount || 0;
       const scrollEl = document.getElementById("scroll-value");
 
-      if(scrollCount >=100){
+      // Show a simple text label based on scroll activity
+      if (scrollCount >= 100) {
         scrollEl.textContent = "High ⚠️";
         scrollEl.classList.add("warning");
-      } else if (scrollCount >=50) {
+      } else if (scrollCount >= 50) {
         scrollEl.textContent = "Medium";
       } else {
         scrollEl.textContent = "Low";
       }
-  } );
+    }
+  );
 });

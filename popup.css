@@ -1,4 +1,9 @@
-*{
+/* =============================================
+   popup.css - Styles for the extension popup
+   Clean, minimal design with orange accents
+   ============================================= */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,15 +11,16 @@
 
 body {
   width: 320px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: #fafafa;
   color: #1a1a1a;
 }
 
-.conatiner {
+.container {
   padding: 20px;
 }
 
+/* Header */
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -22,13 +28,20 @@ body {
   border-bottom: 2px solid #fed7aa;
 }
 
-.header .icon{
+.header .icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.header h1 {
   font-size: 16px;
   font-weight: 700;
   color: #1a1a1a;
   letter-spacing: -0.3px;
 }
 
+/* Stat Cards */
 .stats {
   display: flex;
   flex-direction: column;
@@ -43,22 +56,33 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
 .stat-value {
   font-size: 24px;
   font-weight: 700;
   color: #1a1a1a;
 }
 
-.stat-value.warning{
+/* Color the value orange when it's in warning state */
+.stat-value.warning {
   color: #f97316;
 }
 
-.stat-hint{
+.stat-hint {
   font-size: 11px;
   color: #9ca3af;
   margin-top: 4px;
 }
 
+/* Footer */
 .footer {
   text-align: center;
   margin-top: 20px;

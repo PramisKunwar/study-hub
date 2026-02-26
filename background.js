@@ -31,10 +31,6 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
           "x.com",
           "tiktok.com",
           "reddit.com",
-          "netflix.com",
-          "facebook.com",
-          "linkedin.com",
-          "pinterest.com",
         ];
         const isTracked = trackedDomains.some((domain) =>
           tab.url.includes(domain)

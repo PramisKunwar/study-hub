@@ -3,41 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Procastination Detector</title>
+  <title>Procrastination Detector</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class = "container">
+  <div class="container">
+    <!-- Header -->
     <div class="header">
-      <span class="icon">
-        🎯
-      </span>
+      <span class="icon">🎯</span>
       <h1>Procrastination Detector</h1>
     </div>
 
+    <!-- Stats Section -->
     <div class="stats">
+      <!-- Time on social media -->
       <div class="stat-card">
-        <div class="start-l">Time on social media</div>
-        <div class="start-value" id="time-value">0m 0s</div>
-        <div class="start-hint">Warning at 15 min</div>
+        <div class="stat-label">⏱️ Time on Social Media</div>
+        <div class="stat-value" id="time-value">0m 0s</div>
+        <div class="stat-hint">Warning at 15 min</div>
       </div>
+
+      <!-- Tab switches -->
       <div class="stat-card">
-        <div class="stat-label">Tab Switches (10 min)</div>
+        <div class="stat-label">🔄 Tab Switches (10 min)</div>
         <div class="stat-value" id="tab-value">0</div>
         <div class="stat-hint">Warning at 20 switches</div>
       </div>
 
+      <!-- Scroll activity -->
       <div class="stat-card">
-        <div class="stat-label"> Scroll Activity (2 min)</div>
-        <div class="stat-value" id="scroll-value">0</div>
-        <div class="stat-hint">Warning at 100 scrolls</div>
+        <div class="stat-label">📜 Scroll Activity (2 min)</div>
+        <div class="stat-value" id="scroll-value">Low</div>
+        <div class="stat-hint">Warning at 100 events</div>
       </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
-      Stay Focused. You've got this! 🚀
+      Stay focused. You've got this! 💪
     </div>
   </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
